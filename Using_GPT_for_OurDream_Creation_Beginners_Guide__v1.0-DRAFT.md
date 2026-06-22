@@ -1509,124 +1509,43 @@ GPT can help you explore the idea, but you decide what survives.
 
 ## 9. Using GPT for user personas
 
-GPT can also help create an OurDream User Persona.
+GPT can help turn rough User Persona notes into compact, usable OurDream continuity.
 
-A User Persona is the user-side mini-profile: the reference that tells OurDream who the user is roleplaying so the chat can maintain continuity. It gives OurDream stable details characters can notice, infer, comment on, or respond to.
+The main job is not to make a full backstory. It is to give OurDream stable details about the user-side protagonist so characters can recognize, reference, and react to them consistently. Good Persona details are things characters could plausibly notice, infer, ask about, or comment on in play.
 
-This is different from making a character profile. A character profile defines the bot character. A User Persona defines stable protagonist canon for the user-side role: name, appearance, age or life stage, voice, home, work rhythm, relationship anchors, species, abilities, limits, or other details that should stay consistent across play.
+### What to give GPT
 
-A good User Persona does not need to explain everything. It gives OurDream enough stable information to keep the roleplay grounded.
+A beginner does not need perfect notes. Start with whatever is known, such as:
 
-### What a User Persona is for
-
-Think of a User Persona as continuity reference material.
-
-It helps OurDream and the characters keep track of details like:
-
-* what name or handle to use;
+* name or handle;
 * pronouns or gender;
 * age or life stage;
-* ancestry, species, ethnicity, or other identity details if relevant;
+* ancestry, species, or ethnicity if relevant;
 * appearance baseline;
-* face, posture, movement, gesture, voice, scent, or grooming cues;
-* home base or housing situation;
-* commute, travel habits, or mobility;
-* work, primary role, or day-to-day rhythm;
-* repeatable routines;
-* stable relationship status or key ties;
+* face, voice, movement, scent, or grooming cues;
+* home, work, schedule, or routine anchors;
+* stable relationship anchors;
 * capabilities, limits, resources, or gear for fantasy, sci-fi, supernatural, or nonhuman personas.
 
-The key word is **stable**.
+Not every Persona needs every category. A realistic modern Persona may only need appearance, home, work, and routine anchors. A fantasy Persona may need species, social role, gear, and limits. A sci-fi Persona may need ship role, faction, implants, mobility, or tech access.
 
-A Persona should include highlights OurDream can reliably use. It should not try to include everything that could ever be true.
+The useful question is:
 
-### Use mentionable details
+> What stable details would help OurDream maintain continuity?
 
-The best Persona details are things characters can plausibly notice, infer, ask about, or reference in play.
+### What to ask GPT for
 
-Useful:
+GPT can help by:
 
-```text
-Morgan Vale is a junior archivist at Blackbriar University Library. They know the restricted stacks better than most students, but they have not been told the full supernatural truth. Morgan is in their late twenties, has a quiet voice, ink-smudged fingers, and a habit of checking exits when rooms get too crowded.
-```
+* organizing messy notes;
+* identifying what is stable enough to include;
+* trimming backstory clutter;
+* making details more mentionable;
+* turning vague traits into visible continuity anchors;
+* producing a compact paste-ready Persona;
+* asking concise questions when important details are missing.
 
-This gives OurDream stable details characters can react to: Morgan’s age/life stage, work role, library familiarity, voice, ink stains, and visible habits.
-
-Overbuilt:
-
-```text
-Morgan Vale has a 40-page tragic backstory, three secret destinies, twelve named enemies, a full wardrobe list, and a detailed scene-by-scene plan for how every supernatural discovery should happen.
-```
-
-That is too much for a compact Persona field. It gives OurDream clutter instead of stable, reusable highlights.
-
-A useful Persona detail creates continuity. It does not need to become a full biography.
-
-### What belongs in a User Persona
-
-A beginner-friendly User Persona might include:
-
-* **Core identity:** name, pronouns, gender, age or life stage, ancestry/species/ethnicity if relevant.
-* **Appearance baseline:** build, height, hair, eyes, skin, face anchors, distinctive tells.
-* **Presence cues:** posture, gestures, movement, voice, scent, grooming, or other details characters might notice.
-* **Day-to-day canon:** home base, housing, commute, work, schedule, routines.
-* **Stable relationships:** relationship status, family ties, roommates, pets, coworkers, mentors, rivals, or other recurring anchors.
-* **Genre-specific details:** capabilities, limits, gear, faction, species traits, tech access, magic, resources, or physical constraints if they matter in play.
-
-The Persona does not need every category. Pick what helps OurDream react to continuity.
-
-For a modern realistic Persona, appearance, home, work, routines, and voice may be enough.
-
-For a fantasy Persona, species, social role, equipment, limits, and place in the world may matter more.
-
-For a sci-fi Persona, ship role, implants, faction, tech access, mobility, or environmental limits may be useful.
-
-### Keep it compact
-
-OurDream’s User Persona field should stay compact. A good target is around or under 2,500 characters.
-
-That is enough for stable highlights. It is not enough for an entire life story, and that is a good thing.
-
-A compact Persona is easier for OurDream to use. If the Persona is overloaded, the chat may repeat random details, miss the important ones, or treat background clutter as more relevant than the current scene.
-
-A useful rule:
-
-> Include stable highlights, not everything that could ever be true.
-
-### Examples of useful Persona detail
-
-Modern / grounded example:
-
-```text
-Elias Rowan is a human courier in a canal city, known for his weather-beaten coat, quick stride, and excellent memory for routes. He rents a narrow attic room above a printer’s shop and usually smells faintly of rain, paper dust, and black tea.
-```
-
-This gives characters details they can comment on: Elias’s coat, pace, work, home, scent, and familiarity with the city.
-
-Fantasy / nonhuman example:
-
-```text
-Seren is an elf courier with excellent night vision and a practiced memory for forest routes. Iron-rich dust irritates their lungs, so they avoid old mine roads when possible. They carry a waxed map case, a bone-handled knife, and a courier token from the eastern road guild.
-```
-
-This gives OurDream stable species, capability, limit, gear, and social-role details without turning the Persona into a rulebook.
-
-### What does not belong
-
-A User Persona usually should not be:
-
-* a long backstory;
-* a diary;
-* a full plot outline;
-* a full wardrobe catalog;
-* a scene plan;
-* a list of every preference;
-* a full worldbuilding file;
-* internal template instructions or authoring scaffolding.
-
-Those things can be useful elsewhere, but they usually do not belong in the compact Persona field.
-
-If a detail will help characters recognize, reference, or respond to the user-side protagonist, it may belong. If it is just background clutter, it probably does not.
+A good Persona should stay compact, usually around or under 2,500 characters. It should not become a diary, full biography, plot outline, wardrobe catalog, or scene plan.
 
 ### Starter prompt: create a User Persona
 
@@ -1666,13 +1585,23 @@ Tell me:
 6. a compact revised version around or under 2,500 characters.
 ```
 
-Use this when a Persona feels too long, too vague, or too much like a biography.
+Use this when a Persona feels too long, too vague, or more like a biography than a useful continuity reference.
+
+### Short example
+
+Useful Persona detail:
+
+```text
+Morgan Vale is a junior archivist at Blackbriar University Library. They know the restricted stacks better than most students. Morgan is in their late twenties, has a quiet voice, ink-smudged fingers, and a habit of checking exits when rooms get too crowded.
+```
+
+This works because it gives OurDream stable details characters can use: Morgan’s role, age/life stage, library familiarity, voice, ink stains, and visible habits. It creates continuity hooks without becoming a full backstory.
 
 ### Simple rule
 
-Use the User Persona to give OurDream stable things characters can recognize and respond to.
+Use GPT to turn messy Persona notes into compact, mentionable continuity.
 
-Do not use it as a diary, plot outline, or full backstory.
+If a detail will not help characters recognize, reference, or respond to the persona, it probably does not need to be in the Persona field.
 
 ## 10. Using GPT for group chats
 
