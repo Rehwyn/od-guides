@@ -1,0 +1,17 @@
+{
+  "source_commit": "7047264a3db3ae61ee9f2de63ecf880c9cd7276c",
+  "guides": [
+    {
+      "source": "Using_GPT_for_OurDream_Creation_Beginners_Guide__v1.0-DRAFT.md",
+      "slug": "gpt-assisted-creation",
+      "title": "Using GPT for OurDream Creation: A Beginner’s Practical Guide",
+      "nav_title": "GPT-assisted creation",
+      "version": "v1.0-DRAFT",
+      "summary": "Start using GPT for creative brainstorming, prompts and review.",
+      "sha256": "8926f248ce1b6ce76f541d48be3306343dbb6dc6b5c0d438819d01652c5d75cf",
+      "author": "Rehwyn",
+      "license": "CC BY 4.0"
+    }
+  ],
+  "source_revision": "Uncommitted editorial revision prepared 2026-09-30; source_commit identifies its public base"
+}

@@ -33,6 +33,8 @@ This guide can help with:
 
 This guide is not a full OurDream profile-design manual. It is not a complete prompt-engineering course. It is not a guide to every advanced method, tracker, template, or character-building system someone might use.
 
+OurDream is an adult platform. Keep romantic or sexual character concepts clearly adult in their age, appearance, and setting. For student concepts, use adult university students rather than school framing that suggests minors.
+
 You do not need to learn everything at once.
 
 Start with one useful result. Then another. Add structure only when it solves a problem you actually have.
@@ -67,7 +69,9 @@ The examples are starting points, not required scripts. Copy the ones that match
 
 ## Product note
 
-ChatGPT features, file support, and UI labels can change. Treat product-specific details in this guide as practical working advice, not permanent rules. Before publishing or relying on exact product details, check the current ChatGPT Help pages.
+ChatGPT features, file support, and UI labels can change. Treat product-specific details in this guide as practical working advice, not permanent rules. For current product guidance, see OpenAI’s [Projects and chats](https://learn.chatgpt.com/docs/projects) and [file guidance](https://learn.chatgpt.com/docs/artifacts-viewer). Features and availability can depend on your plan and workspace.
+
+Before publishing a character or setting on OurDream, check its current [Prohibited Content](https://safety.ourdream.ai/policies/prohibited-content) and [Intellectual Property](https://safety.ourdream.ai/policies/intellectual-property) policies. GPT feedback does not establish platform approval.
 
 
 ## 1. The simplest useful way to start
@@ -185,7 +189,7 @@ There are a few different ways to use ChatGPT. You do not need to master all of 
 
 For most OurDream creators, the easiest default is:
 
-> Use a normal chat for quick one-off help. Use a Project for ongoing creation work. Consider a Custom GPT later if you want a specialized reusable assistant.
+> Use a normal chat for quick one-off help. Use a Project for ongoing creation work. Consider a Skill or Plugin later if you need a reusable workflow and your account supports it.
 
 Here is the beginner version.
 
@@ -193,7 +197,8 @@ Here is the beginner version.
 | ----------- | --------------------------------------------------------------------------- | --------------------------------- |
 | Normal chat | Quick one-off questions, simple brainstorming, trying GPT without setup     | Good for experimenting            |
 | Project     | Ongoing creative work with related chats, instructions, and reference files | Best default starting point       |
-| Custom GPT  | A specialized assistant with its own instructions, knowledge, and behavior  | Useful later, not necessary first |
+| Skill / Plugin | Reusable guidance and reference material; a Plugin can also include connected apps | Optional later, when available |
+| Custom GPT | An older specialized assistant being retired in favor of Plugins | Migrate existing workflows; avoid starting a new one |
 
 ### Normal chat
 
@@ -250,19 +255,17 @@ For beginners, this is usually the best starting point because it gives you more
 
 ### Custom GPT
 
-A Custom GPT is a more specialized assistant. It can have its own instructions, knowledge, and capabilities. That can be powerful if you want a reusable helper designed for one specific purpose.
+Custom GPTs are the older specialized-assistant setup: instructions, knowledge files, and capabilities collected for a particular job. You may still see guides or existing helpers that use them.
 
-For example, someone might make a Custom GPT for:
+As checked on September 30, 2026, OpenAI’s [retirement and migration FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq) says the transition affects all ChatGPT plans, including individual accounts. Retirement is scheduled for December 11, 2026, with some approved Enterprise deferrals. Existing GPTs remain usable until their applicable retirement date; restrictions on creating new GPTs and access to migration or Plugins can differ by account. Follow your account’s notice rather than assuming a feature has already disappeared for everyone.
 
-* image prompt drafting;
-* public description review;
-* outfit-note generation;
-* character brainstorming;
-* a specific writing workflow.
+If you already rely on a Custom GPT, prepare and test its replacement. The planned migration turns its instructions into a Skill inside a Plugin and copies its knowledge files, but conversations, sharing settings, and custom actions do not transfer in the same way. A replacement should be tested with familiar tasks before you depend on it. For a new beginner workspace, start with a Project instead.
 
-Custom GPTs can be useful, especially if you want to reuse the same assistant repeatedly or share it with other people. But they are not necessary for a beginner.
+### Skills and Plugins
 
-If you are just starting, a Custom GPT may be more setup than you need. A Project is usually easier because you can start casually, make normal chats, add a few files, and adjust as you learn.
+A Skill is reusable guidance for how to do a task. A Plugin can package Skills, reference files, and connected apps. You might eventually use one for image-prompt drafting, outfit notes, or a repeated review workflow. OpenAI’s [Plugin guidance](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt) describes current availability and use.
+
+These are optional tools for a workflow you already understand. You do not need to build a Plugin to begin creating characters, and a Plugin does not have to connect to an outside service. Keep working in your Project until a repeated task makes the extra setup worthwhile; then check what your account supports.
 
 ### Which should you choose first?
 
@@ -270,7 +273,7 @@ Use this quick rule:
 
 * If you have one quick question, use a normal chat.
 * If you are doing ongoing OurDream creation work, use a Project.
-* If you later want a specialized reusable assistant, consider a Custom GPT.
+* If you later want reusable task guidance, consider a Skill or Plugin where available.
 
 For most creators reading this guide, start with a Project.
 
@@ -678,7 +681,7 @@ Good source documents do not need to be long. They need to have a clear job.
 
 GPT works best with files that are clean, readable, and organized.
 
-ChatGPT features, file support, and UI labels can change. Treat this section as practical working advice, not a permanent list of supported formats. Before publishing or relying on exact product details, check the current ChatGPT Help pages.
+ChatGPT features, file support, and UI labels can change. Treat this section as practical working advice, not a permanent list of supported formats. Check the current [official file guidance](https://learn.chatgpt.com/docs/artifacts-viewer) and confirm that your workspace can read the file you intend to use.
 
 For everyday beginner use, the practical advice is simple:
 
@@ -1545,7 +1548,7 @@ GPT can help by:
 * producing a compact paste-ready Persona;
 * asking concise questions when important details are missing.
 
-A good Persona should stay compact, usually around or under 2,500 characters. It should not become a diary, full biography, plot outline, wardrobe catalog, or scene plan.
+A good Persona should stay compact and fit within the 2,500-character field limit. It should not become a diary, full biography, plot outline, wardrobe catalog, or scene plan.
 
 ### Starter prompt: create a User Persona
 
@@ -1564,7 +1567,7 @@ Focus on compact, mentionable canon:
 - stable relationship anchors;
 - capabilities, limits, resources, or gear if this is fantasy, sci-fi, supernatural, or nonhuman.
 
-Keep it around or under 2,500 characters. Do not make it a full backstory, diary, plot outline, wardrobe catalog, or scene plan. If important details are missing, ask concise questions or mark them as unspecified.
+Keep it at or below 2,500 characters. Do not make it a full backstory, diary, plot outline, wardrobe catalog, or scene plan. If important details are missing, ask concise questions or mark them as unspecified.
 ```
 
 Use this when there are rough notes but not a clean Persona yet.
@@ -1582,7 +1585,7 @@ Tell me:
 3. what is too vague, too long, or too diary-like;
 4. what feels like backstory clutter instead of reusable Persona detail;
 5. what should be trimmed or clarified;
-6. a compact revised version around or under 2,500 characters.
+6. a compact revised version at or below 2,500 characters.
 ```
 
 Use this when a Persona feels too long, too vague, or more like a biography than a useful continuity reference.
@@ -1801,7 +1804,7 @@ Examples:
 * the kitchen table is the only clean surface in the apartment;
 * the cafe has a back booth where regulars leave notes under the sugar jar;
 * the city’s old tram line still runs once a night with no listed driver;
-* the school greenhouse is warm, private, and technically off-limits after dusk;
+* the university greenhouse is warm, private, and technically off-limits after dusk;
 * the tavern owner knows everyone’s business but pretends not to.
 
 These details create action, mood, privacy, conflict, or opportunity.
@@ -2180,7 +2183,7 @@ Use this order:
 2. Turn repeated notes into a tiny source document.
 3. Make a checklist for a repeated planning task.
 4. Make a template when you need consistent output.
-5. Only then consider a more specialized Project or Custom GPT.
+5. Only then consider a more specialized Project, Skill, or Plugin, depending on what your account supports.
 
 ### Starter prompt: turn a workflow into a reusable prompt
 

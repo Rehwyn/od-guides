@@ -1,0 +1,10 @@
+.venv/
+.build/
+zensical.generated.toml
+.cache/
+__pycache__/
+*.pyc
+local/
+evidence/
+fixtures/
+navigation-fixture.md

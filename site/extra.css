@@ -1,0 +1,16 @@
+:root { --md-text-font: system-ui, -apple-system, "Segoe UI", sans-serif; --md-code-font: "Cascadia Code", Consolas, monospace; }
+.md-content__inner { max-width: 52rem; }
+.md-header__button:focus-visible, .md-sidebar-button:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: 3px; }
+.md-typeset pre { overflow-x: auto; }
+.md-typeset .md-typeset__scrollwrap { max-width: 100%; }
+.guide-meta { color: var(--md-default-fg-color--light); font-size: .78rem; }
+@media print {
+  .md-header, .md-sidebar, .md-footer, .md-top, .md-search, .md-dialog, .md-content__button, .headerlink, .md-clipboard { display: none !important; }
+  .md-main, .md-main__inner, .md-content, .md-content__inner { display: block !important; margin: 0 !important; padding: 0 !important; max-width: none !important; width: 100% !important; }
+  .md-typeset pre, .md-typeset code { white-space: pre-wrap !important; overflow-wrap: anywhere !important; overflow: visible !important; }
+  .md-typeset table { display: table !important; width: 100% !important; min-width: 0 !important; table-layout: fixed; }
+  .md-typeset td, .md-typeset th { overflow-wrap: anywhere; }
+  .md-typeset__scrollwrap, .md-typeset__table { display: block !important; margin: 0 !important; overflow: visible !important; }
+  .md-typeset h2, .md-typeset h3 { break-after: avoid; }
+  body { background: white !important; color: black !important; }
+}
