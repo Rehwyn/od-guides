@@ -1,0 +1,85 @@
+name: Guide library Pages
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Require main for publication
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          RELEASE_REF: ${{ github.ref }}
+        run: test "$RELEASE_REF" = refs/heads/main
+      - name: Checkout exact run revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up pinned Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12.14'
+      - name: Install isolated pinned dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install -r requirements.lock.txt
+      - name: Validate and build selected public sources
+        run: |
+          .venv/bin/python build.py --check
+          .venv/bin/python build.py --build
+      - name: Verify artifact boundary and record release
+        env:
+          RELEASE_SHA: ${{ github.sha }}
+        run: |
+          .venv/bin/python - <<'PY'
+          from pathlib import Path
+          import hashlib, json, os
+          output = Path('.build/www/od-guides')
+          assert {p.relative_to(output).as_posix() for p in output.rglob('*.html')} == {'index.html', '404.html', 'guides/gpt-assisted-creation/index.html'}
+          assert not list(output.rglob('*.md'))
+          assert not any(p.is_symlink() for p in output.rglob('*'))
+          for name in ['licensing.txt', 'license-mit.txt', 'third-party-notices.txt']:
+              assert (output / name).is_file()
+          record_path = Path('.build/build-record.json')
+          record = json.loads(record_path.read_text())
+          record['release_commit'] = os.environ['RELEASE_SHA']
+          record['artifact_files'] = {p.relative_to(output).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(output.rglob('*')) if p.is_file()}
+          record_path.write_text(json.dumps(record, indent=2))
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              summary.write('## Reviewed guide-library build\n\n```json\n' + json.dumps(record, indent=2) + '\n```\n')
+          PY
+      - name: Upload generated site root only
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: .build/www/od-guides
+          retention-days: 7
+
+  deploy:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Read Pages configuration
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Deploy reviewed artifact
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
