@@ -4,6 +4,9 @@
 .md-typeset pre { overflow-x: auto; }
 .md-typeset .md-typeset__scrollwrap { max-width: 100%; }
 .guide-meta { color: var(--md-default-fg-color--light); font-size: .78rem; }
+.creator-links { color: var(--md-default-fg-color); font-size: .75rem; line-height: 1.6; margin-block: .65rem 1rem; overflow-wrap: anywhere; }
+.creator-links code { font-size: inherit; }
+.creator-links a:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: 3px; }
 @media print {
   .md-header, .md-sidebar, .md-footer, .md-top, .md-search, .md-dialog, .md-content__button, .headerlink, .md-clipboard { display: none !important; }
   .md-main, .md-main__inner, .md-content, .md-content__inner { display: block !important; margin: 0 !important; padding: 0 !important; max-width: none !important; width: 100% !important; }

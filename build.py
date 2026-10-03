@@ -13,6 +13,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 BUILD = ROOT / '.build'
+CREATOR_LINKS = '<p class="creator-links"><a href="https://ourdream.ai/u/rehwyn">My OurDream profile</a> · <a href="https://ourdream.ai/refer/UNIIYM">Referral link</a> · Referral code: <code>UNIIYM</code></p>'
 
 
 def validate(manifest):
@@ -88,11 +89,11 @@ def main():
         meta = html.escape(f"By {entry['author']} · {entry['version']}")
         byline = f'<p class="guide-meta">{meta} · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>'
         notice = f'\n\n<p class="guide-license">© 2026 {html.escape(entry["author"])}. This guide, including its examples and prompts, is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Share or adapt it with credit, a license link, and changes identified. See the <a href="{html.escape("https://rehwyn.github.io/od-guides/guides/" + entry["slug"] + "/")}">source guide</a>.</p>\n'
-        presentation = lines[0] + '\n\n' + byline + '\n\n' + ''.join(lines[1:]) + notice
+        presentation = lines[0] + '\n\n' + byline + '\n\n' + CREATOR_LINKS + '\n\n' + ''.join(lines[1:]) + notice
         dest.write_text(presentation, encoding='utf-8', newline='\n')
         nav.append({entry['nav_title']: relative})
         home += [f"- [{entry['title']}]({relative}) — {entry['summary']} ({entry['version']})", '']
-    home += ['## Reading and source', '',
+    home += [CREATOR_LINKS, '', '## Reading and source', '',
              'Each guide is one continuous page. Use the library to choose a guide, its contents to jump between sections, and search to find a topic. Your browser can print the complete article.', '',
              'The displayed version identifies the selected public copy. A draft label remains a draft label.', '',
              '[View the public Markdown sources on GitHub](https://github.com/Rehwyn/od-guides).', '',
